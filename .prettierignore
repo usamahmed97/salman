@@ -1,0 +1,12 @@
+node_modules
+coverage
+build
+public
+specs
+amplify
+
+.vscode
+.github
+
+*.json
+*.md
