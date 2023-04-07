@@ -1,7 +1,11 @@
 import React from 'react';
 
 const LandingPage = () => {
-    return ( <div>Landing Page is working</div> );
+    return (
+      <div className="text-3xl font-bold underline">
+        Landing Page is working
+      </div>
+    );
 }
  
 export default LandingPage;
