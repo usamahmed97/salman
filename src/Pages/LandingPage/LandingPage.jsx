@@ -1,12 +1,24 @@
 /* eslint-disable camelcase */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Components/Hero/Hero";
 import Footer from "../../Components/Footer/Footer";
+import Loader from "../../Components/Loader/Loader";
+import "./LandingPage.css"
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Wait for 3 seconds before hiding the loader
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -130,46 +142,68 @@ const LandingPage = () => {
     },
   };
 
+   const contentVariants = {
+     hidden: { opacity: 0 },
+     visible: { opacity: 1, transition: { duration: 2.0 } },
+   };
+
   return (
     <div className="App">
-      <div className="flex flex-col">
-        <Navbar />
-        <Particles id="tsparticles" init={particlesInit} options={options} />
-        <Hero />
-        {/* Here added line breaks to test fixed navbar on scroll */}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Footer />
-      </div>
+      {isLoading ? (
+        <div className="flex items-center justify-center h-screen bg-mattBlack">
+          <Loader />
+        </div>
+      ) : (
+        <div className="flex flex-col">
+          <motion.div
+            className="content"
+            variants={contentVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <Navbar />
+            <Particles
+              id="tsparticles"
+              init={particlesInit}
+              options={options}
+            />
+            <Hero />
+            {/* Here added line breaks to test fixed navbar on scroll */}
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <Footer />
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 };
