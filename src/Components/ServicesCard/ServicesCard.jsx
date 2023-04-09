@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ServicesModal from "../ServicesModal/ServicesModal";
 
 const ServicesCard = ({
-  cardTitle = " ",
+  cardTitle = "",
   title,
   detail,
   information,
@@ -24,7 +24,7 @@ const ServicesCard = ({
     <Card
       title={cardTitle}
       bordered={false}
-      className="shadow-lg border-2 border-gray-300"
+      className="shadow-lg border-2 border-gray-300 bg-gradient"
     >
       <div className="flex flex-col items-center justify-center rounded-lg pt-1 px-6">
         <span className="xs:text-4xl lg:text-5xl text-center mb-3">
@@ -39,7 +39,7 @@ const ServicesCard = ({
         <Button
           onClick={showModal}
           type="text"
-          className="text-indigo-600 font-bold border-2 border-indigo-600 w-auto flex items-center justify-center"
+          className="text-white bg-mattBlack rounded-full font-bold border-2 border-black w-auto flex items-center justify-center"
         >
           {buttonText}
         </Button>

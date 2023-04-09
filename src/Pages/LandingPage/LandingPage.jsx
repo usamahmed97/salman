@@ -9,12 +9,13 @@ import Loader from "../../Components/Loader/Loader";
 import "./LandingPage.css";
 import { motion } from "framer-motion";
 import Services from "../../Components/Services/Services";
+import AboutUs from "../../Components/AboutUs/AboutUs";
+import Contact from "../../Components/Contact/Contact";
 
 const LandingPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait for 3 seconds before hiding the loader
     setTimeout(() => {
       setIsLoading(false);
     }, 3000);
@@ -189,8 +190,9 @@ const LandingPage = () => {
             <br />
             <br />
             <br />
-
             <Services />
+            <AboutUs />
+            <Contact />
           </motion.div>
           <Footer />
         </div>
