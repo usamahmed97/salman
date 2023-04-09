@@ -6,11 +6,12 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Components/Hero/Hero";
 import Footer from "../../Components/Footer/Footer";
 import Loader from "../../Components/Loader/Loader";
-import "./LandingPage.css"
+import "./LandingPage.css";
 import { motion } from "framer-motion";
+import Services from "../../Components/Services/Services";
 
 const LandingPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Wait for 3 seconds before hiding the loader
@@ -142,10 +143,10 @@ const LandingPage = () => {
     },
   };
 
-   const contentVariants = {
-     hidden: { opacity: 0 },
-     visible: { opacity: 1, transition: { duration: 2.0 } },
-   };
+  const contentVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 2.0 } },
+  };
 
   return (
     <div className="App">
@@ -155,20 +156,19 @@ const LandingPage = () => {
         </div>
       ) : (
         <div className="flex flex-col">
+          <Navbar />
           <motion.div
             className="content"
             variants={contentVariants}
             initial="hidden"
             animate="visible"
           >
-            <Navbar />
             <Particles
               id="tsparticles"
               init={particlesInit}
               options={options}
             />
             <Hero />
-            {/* Here added line breaks to test fixed navbar on scroll */}
             <br />
             <br />
             <br />
@@ -189,19 +189,10 @@ const LandingPage = () => {
             <br />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <Footer />
+
+            <Services />
           </motion.div>
+          <Footer />
         </div>
       )}
     </div>

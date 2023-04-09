@@ -1,0 +1,6 @@
+#customize_button .ant-btn:hover {
+    background-color: none;
+    border: none;
+    border-radius: 0px;
+    color: white;
+}
