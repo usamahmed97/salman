@@ -1,0 +1,92 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+
+.container {
+  width: 400px;
+  height: 312px;
+  border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover {
+  transform: scale(0.54);
+}
+
+.container-inner {
+  position: relative;
+  top: -200px;
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+  transform-origin: 50%;
+}
+
+.circle {
+  position: absolute;
+  top: 210px;
+  left: 10px;
+  width: 380px;
+  height: 380px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.img {
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.container:hover .img {
+  transform: translateY(0) scale(1.2);
+}
+
+.img1 {
+  width: 340px;
+  top: 164px;
+  left: 22px;
+}
+
+.img2 {
+  width: 444px;
+  top: 174px;
+  left: -46px;
+}
+
+.img3 {
+  width: 466px;
+  top: 144px;
+  left: -16px;
+}
+
+.divider {
+  width: 160px;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.name {
+  margin-top: 16px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  margin-top: 4px;
+  font-size: 14px;
+  font-style: italic;
+  color: #ffffff;
+  font-family: arial;
+}

@@ -1,32 +1,14 @@
-import { Button, Card, Modal } from "antd";
-import React, { useState } from "react";
-import ServicesModal from "../ServicesModal/ServicesModal";
+import React from "react";
+import { Card } from "antd";
 
-const ServicesCard = ({
-  cardTitle = "",
-  title,
-  detail,
-  information,
-  buttonText,
-}) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+const ServicesCard = ({ cardTitle = "", title, detail, information }) => {
   return (
     <Card
       title={cardTitle}
       bordered={false}
-      className="shadow-lg border-2 border-gray-300 bg-gradient"
+      className="shadow-lg border-2 border-gray-300"
     >
-      <div className="flex flex-col items-center justify-center rounded-lg pt-1 px-6">
+      <div className="flex flex-col items-center justify-center rounded-none pt-1 px-6">
         <span className="xs:text-4xl lg:text-5xl text-center mb-3">
           <b>{title}</b>
         </span>
@@ -36,20 +18,7 @@ const ServicesCard = ({
         <span className="text-base text-black text-center my-8">
           {information}
         </span>
-        <Button
-          onClick={showModal}
-          type="text"
-          className="text-white bg-mattBlack rounded-full font-bold border-2 border-black w-auto flex items-center justify-center"
-        >
-          {buttonText}
-        </Button>
       </div>
-      <ServicesModal
-        cardTitle={cardTitle}
-        isModalOpen={isModalOpen}
-        handleOk={handleOk}
-        handleCancel={handleCancel}
-      />
     </Card>
   );
 };

@@ -19,6 +19,12 @@ module.exports = {
           opacity: "backdrop-opacity-75",
         },
       },
+      backgroundImage: {
+        gradient:
+          "radial-gradient(circle, rgba(3,11,24,1) 0%, rgba(0,48,62,1) 100%)",
+        servicesGradient:
+          "radial-gradient(circle, rgba(3,11,24,1) 0%, rgba(45,48,40,0.8379726890756303) 100%)",
+      },
     },
   },
   plugins: [],
