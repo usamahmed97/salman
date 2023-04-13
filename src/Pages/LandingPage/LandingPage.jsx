@@ -6,7 +6,6 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Components/Hero/Hero";
 import Footer from "../../Components/Footer/Footer";
 import Loader from "../../Components/Loader/Loader";
-import "./LandingPage.css";
 import { motion } from "framer-motion";
 import Services from "../../Components/Services/Services";
 import AboutUs from "../../Components/AboutUs/AboutUs";
@@ -187,10 +186,10 @@ const LandingPage = () => {
             <br />
             <br />
             <br />
+            <br /> 
             <br />
             <br />
             <br />
-
             <Services />
             <AboutUs />
             <Contact />
