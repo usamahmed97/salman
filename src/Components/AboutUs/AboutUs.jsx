@@ -9,7 +9,9 @@ const AboutUs = () => {
         h-4/6 md:h-screen border-t border-b border-white  bg-gradient"
     >
       <span className="mt-24 text-3xl text-center pt-12 pb-6 text-gray-700">
-        <h2 className="pt-2 text-white">MEET OUR TEAM</h2>
+        <h2 className="xs:text-2xl md:text-6xl pt-2 text-white">
+          MEET OUR TEAM
+        </h2>
       </span>
       <div className="flex xs:flex-col md:flex-row items-center justify-between">
         <TeamMemberCard
