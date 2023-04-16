@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="grid grid-cols-2">
         <div className="order-1 col-span-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8827.330741966553!2d2.308756110118289!3d48.87000842543867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2s18%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1635492407441!5m2!1sfr!2sfr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5346.854072447036!2d-106.95548237641812!3d44.80403948106781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345b5f2786a0ac9%3A0x519f6c8e0f081565!2s30%20N%20Gould%20St%20Ste%2022088%2C%20Sheridan%2C%20WY%2082801%2C%20USA!5e0!3m2!1sen!2s!4v1637040284182!5m2!1sen!2s"
             title="map"
             width="100%"
             height="300px"
@@ -115,8 +115,9 @@ const Contact = () => {
             </a>
             {/* ::Address */}
             <p className="text-sm text-gray-500 leading-6">
-              Askari 10, Cant. <br /> 54000 Lahore <br /> Pakistan
+              30 N Gould St Ste <br /> 22088 Sheridan <br /> WY, 82801
             </p>
+            <p className="text-sm text-gray-500 leading-6">(859) 795-6811</p>
             {/* ::Socials */}
             <div className="flex items-center">
               {/* :Twitter */}
