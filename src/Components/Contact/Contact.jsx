@@ -111,7 +111,7 @@ const Contact = () => {
               className="inline-flex items-center text-sm text-blue-400 font-semibold hover:text-blue-500"
             >
               <MailOutlined className="mr-2 w-5 text-gray-400" />
-              thetrucklad@example.com
+              info@thetrucklad.com
             </a>
             {/* ::Address */}
             <p className="text-sm text-gray-500 leading-6">
