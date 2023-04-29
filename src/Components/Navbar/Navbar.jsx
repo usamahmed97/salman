@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../shared/assests/logo4.svg";
+import logo from "../../shared/assests/logo.png";
 import { Button } from "antd";
 import "./navbar.css";
 import MobileNavbar from "./MobileNavbar";
@@ -38,7 +38,7 @@ const Navbar = () => {
     <div className="sticky top-0 z-50 bg-mattBlack border-b border-white">
       <nav className="h-16 flex justify-between bg-whiteColor items-center px-8 md:px-12 xl:px-60">
         <div>
-          <img className="w-24" src={logo} alt="truck_lad" />
+          <img className="w-16" src={logo} alt="truck_lad"/>
         </div>
         <div className="flex items-center">
           <div className="hidden md:flex" id="customize_button">
